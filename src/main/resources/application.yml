@@ -1,0 +1,15 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: bootx-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: project
+          uri: http://localhost:9003
+          order: 1
+          predicates:
+            - Path=/api/project/**
+          filters:
+            - StripPrefix=1
