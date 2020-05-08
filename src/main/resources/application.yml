@@ -7,9 +7,9 @@ spring:
     gateway:
       routes:
         - id: project
-          uri: http://localhost:9003
+          uri: http://localhost:9003/project_manager
           order: 1
           predicates:
-            - Path=/api/project/**
+            - Path=/api/project_manager/**
           filters:
             - StripPrefix=1
