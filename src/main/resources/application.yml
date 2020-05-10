@@ -13,5 +13,12 @@ spring:
             - Path=/api/project_manager/**
           filters:
             - StripPrefix=1
+        - id: bootx
+          uri: http://127.0.0.1:9001/bootx
+          order: 1
+          predicates:
+            - Path=/api/bootx/**
+          filters:
+            - StripPrefix=1
   main:
     allow-bean-definition-overriding: true
